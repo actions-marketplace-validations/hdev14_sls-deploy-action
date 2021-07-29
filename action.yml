@@ -1,9 +1,23 @@
 # action.yml
-name: 'Serverless Framework Deploy'
-description: 'Action to deploy serverless applications'
+name: 'Serverless Framework Deploy AWS'
+description: 'Action to deploy serverless applications on AWS'
 branding:
   icon: 'upload-cloud'
   color: 'blue'
+inputs:
+  awsAccessKeyID:
+    description: 'AWS access key ID'
+    required: true
+  awsSecretAccessKey:
+    description: 'AWS secret access key'
+    required: true
+  stage:
+    description: 'The specific stage to deploy'
+    required: true
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  args:
+    - "{{ inputs.awsAccessKeyID }}"
+    - "{{ inputs.awsSecretAccessKey }}"
+    - "{{ inputs.stage }}"
