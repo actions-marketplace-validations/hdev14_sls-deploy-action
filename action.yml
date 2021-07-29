@@ -1,0 +1,9 @@
+# action.yml
+name: 'Serverless Framework Deploy'
+description: 'Action to deploy serverless applications'
+branding:
+  icon: 'upload-cloud'
+  color: 'blue'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
