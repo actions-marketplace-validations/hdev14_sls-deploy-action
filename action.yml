@@ -12,7 +12,10 @@ inputs:
     description: 'AWS secret access key'
     required: true
   stage:
-    description: 'The specific stage to deploy'
+    description: 'The specific stage name to deploy'
+    required: true
+  region:
+    description: 'The specific region on AWS'
     required: true
 runs:
   using: 'docker'
@@ -21,3 +24,4 @@ runs:
     - "{{ inputs.awsAccessKeyID }}"
     - "{{ inputs.awsSecretAccessKey }}"
     - "{{ inputs.stage }}"
+    - "{{ inputs.region }}"
