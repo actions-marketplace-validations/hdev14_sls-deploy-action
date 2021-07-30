@@ -21,7 +21,7 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - "{{ inputs.awsAccessKeyID }}"
-    - "{{ inputs.awsSecretAccessKey }}"
-    - "{{ inputs.stage }}"
-    - "{{ inputs.region }}"
+    - ${{ inputs.awsAccessKeyID }}
+    - ${{ inputs.awsSecretAccessKey }}
+    - ${{ inputs.stage }}
+    - ${{ inputs.region }}
