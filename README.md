@@ -15,7 +15,7 @@ Github Action to deploy serverless applications on AWS.
       region: "us-east-1"
 ```
 
-It's important to add on serverless config file, the folowing lines within provider context:
+It's important to add in the serverless config file, the folowing lines within the context of provider
 
 ```yml
   stage: "${opt:stage, 'dev'}"
