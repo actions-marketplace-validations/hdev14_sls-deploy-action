@@ -9,5 +9,5 @@ npm ci
 
 npx sls config credentials -p aws --key $AWS_ACCESS_KEY_ID --secret $AWS_SECRET_ACCESS_KEY
 
-npx sls deploy --stage $STAGE --region $REGION -v
+npx sls deploy --stage $STAGE --region $REGION --verbose
 
